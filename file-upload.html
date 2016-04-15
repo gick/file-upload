@@ -231,7 +231,10 @@ Example:
         type: Boolean,
         value: false
       },
-
+      public:{
+        type:Boolean,
+        value:false
+      },
       /**
        * `noink` indicates that the button should not have an ink effect
       */
@@ -443,7 +446,7 @@ Example:
 
       var formData = new FormData();
       formData.append("file", file, file.name);
-
+      formData.append('public',this.public)
       var xhr = file.xhr = new XMLHttpRequest();
 
       xhr.upload.onprogress = function(e) {
